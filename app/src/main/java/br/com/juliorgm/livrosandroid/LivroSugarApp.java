@@ -5,8 +5,7 @@ import com.orm.SugarContext;
 
 public class LivroSugarApp extends SugarApp {
 
-
-
+//aaa
     @Override
     public void onCreate() {
         super.onCreate();
