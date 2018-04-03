@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Informe o Título"
-        android:inputType="textPersonName"
+        android:inputType="textCapSentences|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editISBN" />
@@ -64,4 +64,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEdicao" />
+
+    <Button
+        android:id="@+id/botaoDeleteId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="excluirLivro"
+        android:text="Deletar"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSalvarId" />
 </android.support.constraint.ConstraintLayout>

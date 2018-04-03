@@ -25,7 +25,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormLivrosActivity"></activity>
+        <activity
+            android:name=".FormLivrosActivity"
+            android:parentActivityName="br.com.juliorgm.livrosandroid.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.juliorgm.livrosandroid.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

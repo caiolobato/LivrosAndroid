@@ -3,6 +3,7 @@ package br.com.juliorgm.livrosandroid;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabItem;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.com.juliorgm.livrosandroid.adapter.LivroAdapter;
 import br.com.juliorgm.livrosandroid.model.Livro;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton buttonAdd;
     Livro livro;
 
-//aaaaaa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,8 +95,10 @@ public class MainActivity extends AppCompatActivity {
                 int position = menuInfo.position;
                 livro = (Livro) listViewLivros.getItemAtPosition(position);
 
-                //PAREI AQUI DANDO NEW INTENT, PUT EXTRA, CARREGA CAMPOS, START ACTIVITY
 
+                Intent intent = new Intent(MainActivity.this,FormLivrosActivity.class);
+                intent.putExtra("LIVRO",livro);
+                startActivity(intent);
 
                 return false;
             }
@@ -112,9 +115,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void carregaLista() {
-        List<Livro> livrosLista = Livro.listAll(Livro.class);
-        ArrayAdapter<Livro> adapter = new ArrayAdapter<Livro>(MainActivity.this,android.R.layout.simple_list_item_1,livrosLista);
+        List<Livro> livrosLista = Livro.listAll(Livro.class,"titulo");
+
+//        ArrayAdapter<Livro> adapter = new ArrayAdapter<Livro>(MainActivity.this,android.R.layout.simple_list_item_1,livrosLista);
+        LivroAdapter adapter = new LivroAdapter(livrosLista, this);
+
         listViewLivros.setAdapter(adapter);
+
+
     }
 
 

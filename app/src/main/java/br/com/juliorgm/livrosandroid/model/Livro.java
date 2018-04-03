@@ -4,11 +4,13 @@ import com.orm.SugarApp;
 import com.orm.SugarRecord;
 import com.orm.dsl.Unique;
 
+import java.io.Serializable;
+
 /**
  * Created by Julio on 27/03/2018.
  */
 
-public class Livro extends SugarRecord {
+public class Livro extends SugarRecord implements Serializable {
 
     @Unique
     private String isbn;
