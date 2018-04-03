@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     ListView listViewLivros;
     FloatingActionButton buttonAdd;
     Livro livro;
-///22222222221k
-    ///111111
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
