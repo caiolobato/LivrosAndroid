@@ -52,7 +52,6 @@ public class LivroHelper {
             livro.setEdicao(campoEdicao.getText().toString());
         }
 
-
         return livro;
     }
 
