@@ -32,9 +32,27 @@ public class LivroHelper {
     }
 
     public Livro pegaLivro(){ // FALTA COLOCAR AQUI SE FOR NULL TEM Q BOTAR "NÃO INFORMADO"
-        livro.setIsbn(campoISBN.getText().toString());
-        livro.setTitulo(campoTitulo.getText().toString());
-        livro.setEdicao(campoEdicao.getText().toString());
+
+
+        if ((campoISBN.getText().equals(""))) {
+            livro.setIsbn("Não informado");
+        } else {
+            livro.setIsbn(campoISBN.getText().toString());
+        }
+
+        if(campoTitulo.getText().equals("")){
+            livro.setTitulo("Não informado");
+        } else {
+            livro.setTitulo(campoTitulo.getText().toString());
+        }
+
+        if(campoEdicao.getText().equals("")){
+            livro.setEdicao("Não informado");
+        } else {
+            livro.setEdicao(campoEdicao.getText().toString());
+        }
+
+
         return livro;
     }
 
