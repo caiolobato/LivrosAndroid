@@ -41,8 +41,4 @@ public class Livro extends SugarRecord implements Serializable {
         this.edicao = edicao;
     }
 
-    @Override
-    public String toString() {
-        return isbn + " - " +titulo + " - " + edicao;
-    }
 }

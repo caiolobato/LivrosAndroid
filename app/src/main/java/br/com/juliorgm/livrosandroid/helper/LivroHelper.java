@@ -31,22 +31,22 @@ public class LivroHelper {
         return livro;
     }
 
-    public Livro pegaLivro(){ 
+    public Livro pegaLivro(){
 
 
-        if ((campoISBN.getText().equals(""))) {
+        if ((campoISBN.getText().toString().equals(""))) {
             livro.setIsbn("Não informado");
         } else {
             livro.setIsbn(campoISBN.getText().toString());
         }
 
-        if(campoTitulo.getText().equals("")){
+        if(campoTitulo.getText().toString().equals("")){
             livro.setTitulo("Não informado");
         } else {
             livro.setTitulo(campoTitulo.getText().toString());
         }
 
-        if(campoEdicao.getText().equals("")){
+        if(campoEdicao.getText().toString().equals("")){
             livro.setEdicao("Não informado");
         } else {
             livro.setEdicao(campoEdicao.getText().toString());
