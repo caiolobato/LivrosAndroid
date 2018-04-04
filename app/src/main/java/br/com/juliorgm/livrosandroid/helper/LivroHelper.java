@@ -31,7 +31,7 @@ public class LivroHelper {
         return livro;
     }
 
-    public Livro pegaLivro(){ // FALTA COLOCAR AQUI SE FOR NULL TEM Q BOTAR "NÃO INFORMADO"
+    public Livro pegaLivro(){ 
 
 
         if ((campoISBN.getText().equals(""))) {
